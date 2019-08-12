@@ -77,7 +77,10 @@ void getSubString(const string &str1, const string &str2)
     vector<int> result;
     for (int k = str1.size(); k > 0; k--)
     {
-        combination(str1, str2, k, 0, result);
+        if (NResult == 0)
+        {   combination(str1, str2, k, 0, result);}
+        else
+        {   break;}
     }
 }
 
