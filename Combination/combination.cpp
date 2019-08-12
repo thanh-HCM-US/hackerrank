@@ -24,14 +24,16 @@ void combination(const vector<int> &arr, int k, int subK, vector<int> result)
     }
 }
 
-int main()
+int main(int argc, char* argv[])
 {
     vector<int> arr;
     vector<int> result;
+    string temp = argv[1];
+    int k = std::stoi(temp);
     for (int i=0; i<20 ; i++)
     {
         arr.push_back(i);
     }
-    combination(arr, 4, 0, result);
+    combination(arr, k, 0, result);
     return 0;
 }
